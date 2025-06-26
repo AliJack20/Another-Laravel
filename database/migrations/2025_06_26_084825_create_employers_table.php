@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        Schema::create('employers', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('employer_id');
-            // foreign_id called employer_id
-            $table->foreignIdFor(\App\Models\Employer::class);
-            $table->string('title');
-            $table->string('salary');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jobs');
+        Schema::dropIfExists('employers');
     }
 };
