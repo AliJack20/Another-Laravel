@@ -19,7 +19,8 @@ class EmployerFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->company()
+            'name' => fake()->company(),
+            'user_id' =>User::factory
         ];
     }
 }

@@ -42,10 +42,11 @@ class JobController extends Controller
         
     }
 
-    public function edit($id) {
-    $job = Job::find($id);
+    public function edit(Job $job) {
 
-    return view('jobs.edit', ['job' => $job]);
+        //$job = Job::find($id);
+
+        return view('jobs.edit', ['job' => $job]);
         
     }
 
